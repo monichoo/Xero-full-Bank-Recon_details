@@ -16,6 +16,14 @@ permanently, so line-by-line reconciling needs no clicking.
 TRF IB:XXXX0000-0 FT250101AB12345678 EXAMPLE PAYER NAME
 ```
 
+### Before — truncated, with a *More details* link to click
+
+![Before: the description is cut off at "EBACT50127..." and a More details link sits underneath](docs/before-truncated.png)
+
+### After — full description on the row, no link needed
+
+![After: the description reads in full and the More details link is gone](docs/after-full.png)
+
 ## Two versions — pick one
 
 | | `css-only/` | `with-js/` |
