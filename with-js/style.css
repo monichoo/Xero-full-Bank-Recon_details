@@ -14,6 +14,9 @@
   overflow: visible !important;
 }
 
-/* The popup button is redundant once the text is inline.
-   Delete this rule to get the button back. */
-[data-testid="more-details"] { display: none !important; }
+/* The More details button is deliberately left in place. Only the description
+   is expanded here; the popup is still the only route to Payee, Reference,
+   Transaction Type and Cheque No.
+
+   To hide it anyway, uncomment:
+   [data-testid="more-details"] { display: none !important; } */

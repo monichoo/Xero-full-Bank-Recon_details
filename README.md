@@ -20,9 +20,12 @@ TRF IB:XXXX0000-0 FT250101AB12345678 EXAMPLE PAYER NAME
 
 ![Before: the description is cut off at "EBACT50127..." and a More details link sits underneath](docs/before-truncated.png)
 
-### After — full description on the row, no link needed
+### After — full description on the row
 
-![After: the description reads in full and the More details link is gone](docs/after-full.png)
+![After: the description reads in full on the statement line](docs/after-full.png)
+
+*(This shot was taken from an earlier build that also hid the **More details**
+link. Current versions leave the link in place.)*
 
 ## Two versions — pick one
 
@@ -69,8 +72,9 @@ The **More details** popup also holds Payee, Reference, Transaction Type and
 Cheque No. Those are not present on the row — Xero fetches them on click — so
 CSS and DOM tricks cannot surface them. Only the description is covered.
 
-Both versions hide the now-redundant **More details** button. To get it back,
-delete this rule from `style.css`:
+The **More details** button is therefore left in place in both versions, as the
+only route to those fields. To hide it anyway, uncomment this rule at the
+bottom of `style.css`:
 
 ```css
 [data-testid="more-details"] { display: none !important; }
