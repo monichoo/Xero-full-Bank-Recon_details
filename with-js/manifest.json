@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Xero — Full Statement Details",
+  "version": "2.0",
+  "description": "Expands truncated bank statement descriptions inline on the Reconcile page as real, selectable text.",
+  "content_scripts": [
+    {
+      "matches": ["https://*.xero.com/*"],
+      "css": ["style.css"],
+      "js": ["expand.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

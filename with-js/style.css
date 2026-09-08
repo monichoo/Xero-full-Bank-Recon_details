@@ -1,0 +1,19 @@
+/* Let the expanded description wrap instead of being clipped */
+[data-testid="line-details"] [data-testid="notes"] {
+  max-width: none !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+  word-break: break-word;
+}
+
+/* Let the row grow to fit the longer text */
+[data-testid="line-details"] {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* The popup button is redundant once the text is inline.
+   Delete this rule to get the button back. */
+[data-testid="more-details"] { display: none !important; }

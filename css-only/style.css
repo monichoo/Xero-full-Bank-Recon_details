@@ -1,0 +1,34 @@
+/* Xero keeps the complete description in title="" and shows a truncated copy.
+   Hide the truncated copy and paint the title attribute in its place.
+
+   Trade-off: ::after is generated content, so the result is NOT selectable
+   or copyable. Use the with-js version if you need to copy references. */
+
+[data-testid="line-details"] [data-testid="notes"][title] {
+  font-size: 0 !important;
+  max-width: none !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+[data-testid="line-details"] [data-testid="notes"][title]::after {
+  content: attr(title);
+  display: block;
+  font-size: 11px;
+  line-height: 1.35;
+  white-space: normal;
+  word-break: break-word;
+  color: #222;
+}
+
+/* Let the row grow to fit the longer text */
+[data-testid="line-details"] {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+}
+
+/* The popup button is redundant once the text is inline.
+   Delete this rule to get the button back. */
+[data-testid="more-details"] { display: none !important; }
